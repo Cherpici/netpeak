@@ -2,8 +2,7 @@ import  allure
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.ui import Select
 
-
-@allure.title('')
+@allure.title('Test for Netpeak')
 def test_netpeak():
     driver = WebDriver(executable_path='C://Users/Ion/PycharmProjects/selenium/chromedriver.exe')
     driver.maximize_window()
@@ -19,7 +18,6 @@ def test_netpeak():
     with allure.step('Upload file with invalid format in block and chek error'):
         element = driver.find_element_by_xpath('//input[@name="up_file"]')
         element.send_keys("C://Users/Ion/PycharmProjects/selenium/foto.png")
-
 
     #t = driver.find_element_by_xpath('//div[@id="up_file_name"]/label').text
     #assert t == "Ошибка: неверный формат файла (разрешённые форматы: doc, docx, pdf, txt, odt, rtf)."
